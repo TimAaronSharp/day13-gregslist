@@ -1,4 +1,5 @@
 import { Car } from './models/Car.js'
+import { House } from './models/House.js'
 import { EventEmitter } from './utils/EventEmitter.js'
 import { createObservableProxy } from './utils/ObservableProxy.js'
 
@@ -54,6 +55,25 @@ class ObservableAppState extends EventEmitter {
       imgUrl: 'https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/images/02q4/267343/subaru-baja-photo-9829-s-original.jpg?fill=1:1&resize=1200:*'
     }),
   ]
+
+  houses = [new House({
+    year: 1986,
+    bedrooms: 2,
+    bathrooms: 2.5,
+    sqft: 1300,
+    price: 350000,
+    description: 'Charming suburban home with newly refinished bathrooms',
+    imgUrl: '../assets/img/1986-house.jpeg'
+  }),
+  new House({
+    year: 1993,
+    bedrooms: 5,
+    bathrooms: 3,
+    sqft: 2000,
+    price: 750000,
+    description: 'Beautiful and spacious house',
+    imgUrl: '../assets/img/1993-house.jpeg'
+  })]
 }
 
 export const AppState = createObservableProxy(new ObservableAppState())
