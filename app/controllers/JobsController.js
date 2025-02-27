@@ -1,4 +1,6 @@
 import { AppState } from "../AppState.js";
+import { jobsService } from "../services/JobsService.js";
+import { getFormData } from "../utils/FormHandler.js";
 
 
 
@@ -10,8 +12,6 @@ export class JobsController {
   }
 
   drawJobs() {
-    console.log('is drawJobs communicating?');
-
     const jobs = AppState.jobs
     let jobCardContent = ''
 
@@ -22,5 +22,19 @@ export class JobsController {
     const jobListingElem = document.getElementById('jobListings')
 
     jobListingElem.innerHTML = jobCardContent
+  }
+
+  createJobListing() {
+    event.preventDefault()
+
+    const jobFormElem = event.target
+
+    const rawJobData = getFormData(jobFormElem)
+
+    jobsService.createJob(rawJobData)
+
+    // @ts-ignore
+    jobFormElem.reset()
+
   }
 }
