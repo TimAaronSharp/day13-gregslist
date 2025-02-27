@@ -8,7 +8,7 @@ export class HousesController {
   constructor() {
     AppState.on('houses', this.drawHouses)
 
-    this.drawHouses()
+    housesService.loadHouses()
   }
 
   drawHouses() {
@@ -41,6 +41,14 @@ export class HousesController {
   }
 
   deleteHouseListing(houseId) {
-    console.log(`deleteHouseListing is communicating. "deleted" ${houseId}`);
+    const confirmed = window.confirm('Are you sure you want to delete this car listing?')
+
+    if (!confirmed) {
+      return
+    }
+    console.log(`deleting car with the id of ${houseId}`);
+
+    housesService.deleteHouse(houseId)
+
   }
 }
