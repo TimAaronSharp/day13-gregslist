@@ -7,31 +7,21 @@ import { loadState, saveState } from "../utils/Store.js";
 class HousesService {
 
   createHouse(houseData) {
-    console.log('houseService.createHouse is communicating', houseData);
-
     const newHouse = new House(houseData)
-    console.log(`newHouse is ${newHouse}`);
 
     const houses = AppState.houses
     houses.push(newHouse)
 
     this.saveHouses()
-
-    console.log(houses);
-
   }
 
   deleteHouse(houseID) {
     const houses = AppState.houses
     const houseIndex = houses.findIndex(house => house.id == houseID)
 
-    console.log(`Index is ${houseIndex}`);
-
     houses.splice(houseIndex, 1)
 
     this.saveHouses()
-    console.log(houses);
-
   }
 
   saveHouses() {
@@ -45,7 +35,6 @@ class HousesService {
       AppState.emit('houses')
       return
     }
-
     AppState.houses = housesFromLocalStorage
   }
 }

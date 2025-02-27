@@ -13,6 +13,14 @@ class JobsService {
     this.saveJobs()
   }
 
+  deleteJob(jobId) {
+    const jobs = AppState.jobs
+    const jobIndex = jobs.findIndex(job => job.id == jobId)
+
+    jobs.splice(jobIndex, 1)
+    this.saveJobs()
+  }
+
   saveJobs() {
     saveState('jobs', AppState.jobs)
   }

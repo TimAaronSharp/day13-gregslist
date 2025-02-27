@@ -37,4 +37,15 @@ export class JobsController {
     jobFormElem.reset()
 
   }
+
+  deleteJobListing(jobId) {
+    const confirmed = window.confirm('Are you sure you want to delete this car listing?')
+
+    if (!confirmed) {
+      return
+    }
+    console.log(`deleting car with the id of ${jobId}`);
+
+    jobsService.deleteJob(jobId)
+  }
 }
