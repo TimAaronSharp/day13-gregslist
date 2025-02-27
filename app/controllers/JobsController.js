@@ -8,7 +8,7 @@ export class JobsController {
   constructor() {
     AppState.on('jobs', this.drawJobs)
 
-    this.drawJobs()
+    jobsService.loadJobs()
   }
 
   drawJobs() {
