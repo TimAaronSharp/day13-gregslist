@@ -24,7 +24,7 @@ input {
   align-items: end;
 }
 
-.car-img {
+.img-style {
   width: 40%;
   max-height: 33vh;
   object-fit: cover;

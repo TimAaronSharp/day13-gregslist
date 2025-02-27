@@ -57,7 +57,7 @@ export class Car {
     return `
      <div class="col-12">
       <div class="shadow bg-light d-flex mb-4">
-        <img src="${this.imgUrl}" alt="${this.make} ${this.model}" class="car-img">
+        <img src="${this.imgUrl}" alt="${this.make} ${this.model}" class="img-style">
         <div class="p-3 flex-grow-1">
           <h4 class="text-capitalize">${this.year} ${this.make} ${this.model}</h4>
           <div class="d-flex justify-content-between">

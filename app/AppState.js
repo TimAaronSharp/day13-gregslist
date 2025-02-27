@@ -72,7 +72,7 @@ class ObservableAppState extends EventEmitter {
     sqft: 2000,
     price: 750000,
     description: 'Beautiful and spacious house',
-    imgUrl: '../assets/img/1993-house.jpeg'
+    imgUrl: '../assets/img/1993-house.jpg'
   })]
 }
 
