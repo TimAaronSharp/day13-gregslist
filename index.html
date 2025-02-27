@@ -211,6 +211,55 @@
       </div>
     </section>
 
+
+    <section class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="fs-1">Jobs</h2>
+        </div>
+      </div>
+    </section>
+    <section class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3>List You Job Posting</h3>
+        </div>
+        <div class="col-md-6">
+          <div class="shadow bg-light px-5 py-2">
+            <form onsubmit="app.jobsController.createJobListing()">
+              <div class="mb-3">
+                <label for="jobCompanyName">Company Name</label>
+                <input id="jobCompanyName" name="companyName" type="text" required minlength="5" maxlength="100">
+              </div>
+              <div class="mb-3">
+                <label for="jobJobTitle">Job Title</label>
+                <input id="jobJobTitle" name="jobTitle" type="text" required minlength="5" maxlength="100">
+              </div>
+              <div class="mb-3">
+                <label for="jobSalary">Salary</label>
+                <input id="jobSalary" name="salary" type="number" required min="15000" max="100000">
+              </div>
+              <div class="mb-3">
+                <label for="jobCity">City</label>
+                <input id="jobCity" name="city" type="text" required minlength="5" maxlength="100">
+              </div>
+              <div class="mb-3">
+                <label for="jobState">State</label>
+                <input id="jobState" name="state" type="text" required minlength="5" maxlength="100">
+              </div>
+              <div class="mb-3">
+                <label for="jobImgUrl">Image URL</label>
+                <input id="jobImgUrl" name="imgUrl" type="text" required minlength="17" maxlength="1000">
+              </div>
+              <div class="text-end">
+                <button class="btn btn-outline-danger me-2" type="reset">Reset Form</button>
+                <button class="btn btn-outline-dark" type="submit">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="container">
       <div id="jobListings" class="row">
         <!-- <div class="col-12">
