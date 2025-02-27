@@ -133,6 +133,55 @@
     </section>
 
     <section class="container">
+      <div class="row mt-2">
+        <div class="col-12">
+          <h2 class="fs-1">Houses</h2>
+        </div>
+      </div>
+    </section>
+    <section class="container">
+      <div class="row mb-3">
+        <div class="col-12">
+          <h3>List Your House</h3>
+        </div>
+        <div class="col-md-6">
+          <div class="shadow bg-light px-5 py-2">
+            <form onsubmit="app.housesController.createHouseListing()">
+              <div class="mb-3">
+                <label for="houseYear">Year</label>
+                <input id="houseYear" name="year" type="number" required minlength="4" maxlength="4">
+              </div>
+              <div class="mb-3">
+                <label for="houseBedrooms">Bedrooms</label>
+                <input id="houseBedrooms" name="bedrooms" type="number" required minlength="1" maxlength="2">
+              </div>
+              <div class="mb-3">
+                <label for="houseBathrooms">Bathrooms</label>
+                <input id="houseBathrooms" name="bathrooms" type="number" required minlength="1" maxlength="4">
+              </div>
+              <div class="mb-3">
+                <label for="houseSqft">Sqft</label>
+                <input id="houseSqft" name="sqft" type="number" required minlength="3" maxlength="4">
+              </div>
+              <div class="mb-3">
+                <label for="housePrice">Price</label>
+                <input id="housePrice" name="price" type="number" required minlength="1" maxlength="10">
+              </div>
+              <div class="mb-3">
+                <label for="houseDescription">Description</label>
+                <input id="houseDescription" name="description" type="text" required minlength="1" maxlength="1000">
+              </div>
+              <div class="mb-3">
+                <label for="houseImgUrl">Image URL</label>
+                <input id="houseImgUrl" name="imgUrl" type="number" required minlength="1" maxlength="1000">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
       <div id="houseListings" class="row">
         <!-- <div class="col-md-12">
           <div class="shadow bg-light d-flex mb-4">
