@@ -1,5 +1,6 @@
 import { Car } from './models/Car.js'
 import { House } from './models/House.js'
+import { Job } from './models/Job.js'
 import { EventEmitter } from './utils/EventEmitter.js'
 import { createObservableProxy } from './utils/ObservableProxy.js'
 
@@ -74,6 +75,24 @@ class ObservableAppState extends EventEmitter {
     description: 'Beautiful and spacious house',
     imgUrl: '../assets/img/1993-house.jpg'
   })]
+
+  jobs = [new Job({
+    companyName: 'blockbuster video',
+    jobTitle: 'customer service',
+    salary: 25000,
+    city: 'riverton',
+    state: 'utah',
+    imgUrl: '../assets/img/Blockbuster.png'
+  }),
+  new Job({
+    companyName: 'fairchild semiconductor',
+    jobTitle: 'operator',
+    salary: 30000,
+    city: 'west jordan',
+    state: 'utah',
+    imgUrl: '../assets/img/Fairchild.png'
+  })
+  ]
 }
 
 export const AppState = createObservableProxy(new ObservableAppState())
