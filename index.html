@@ -149,23 +149,23 @@
             <form onsubmit="app.housesController.createHouseListing()">
               <div class="mb-3">
                 <label for="houseYear">Year</label>
-                <input id="houseYear" name="year" type="number" required minlength="4" maxlength="4">
+                <input id="houseYear" name="year" type="number" required min="1800" max="2025">
               </div>
               <div class="mb-3">
                 <label for="houseBedrooms">Bedrooms</label>
-                <input id="houseBedrooms" name="bedrooms" type="number" required minlength="1" maxlength="2">
+                <input id="houseBedrooms" name="bedrooms" type="number" required min="1" max="10">
               </div>
               <div class="mb-3">
                 <label for="houseBathrooms">Bathrooms</label>
-                <input id="houseBathrooms" name="bathrooms" type="number" required minlength="1" maxlength="4">
+                <input id="houseBathrooms" name="bathrooms" type="number" required min="1" max="10">
               </div>
               <div class="mb-3">
                 <label for="houseSqft">Sqft</label>
-                <input id="houseSqft" name="sqft" type="number" required minlength="3" maxlength="4">
+                <input id="houseSqft" name="sqft" type="number" required min="650" max="3000">
               </div>
               <div class="mb-3">
                 <label for="housePrice">Price</label>
-                <input id="housePrice" name="price" type="number" required minlength="1" maxlength="10">
+                <input id="housePrice" name="price" type="number" required min="1" max="1000000">
               </div>
               <div class="mb-3">
                 <label for="houseDescription">Description</label>
@@ -173,7 +173,11 @@
               </div>
               <div class="mb-3">
                 <label for="houseImgUrl">Image URL</label>
-                <input id="houseImgUrl" name="imgUrl" type="number" required minlength="1" maxlength="1000">
+                <input id="houseImgUrl" name="imgUrl" type="url" required minlength="1" maxlength="1000">
+              </div>
+              <div class="text-end">
+                <button class="btn btn-outline-danger me-2" type="reset">Reset Form</button>
+                <button class="btn btn-outline-dark" type="submit">Submit</button>
               </div>
             </form>
           </div>
